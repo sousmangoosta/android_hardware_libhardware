@@ -201,13 +201,6 @@ typedef enum {
      * Data type   - int32_t.
      */
     BT_PROPERTY_REMOTE_RSSI,
-
-   /**
-    * Description - Trust value of the remote device
-    * Access mode - GET and SET
-    * Data type   - boolean.
-    */
-    BT_PROPERTY_REMOTE_TRUST_VALUE,
    /**
      * Description - Remote version info
      * Access mode - SET/GET.
@@ -288,7 +281,7 @@ typedef void (*discovery_state_changed_callback)(bt_discovery_state_t state);
 
 /** Bluetooth Legacy PinKey Request callback */
 typedef void (*pin_request_callback)(bt_bdaddr_t *remote_bd_addr,
-                                        bt_bdname_t *bd_name, uint32_t cod, uint8_t secure);
+                                        bt_bdname_t *bd_name, uint32_t cod);
 
 /** Bluetooth SSP Request callback - Just Works & Numeric Comparison*/
 /** pass_key - Shall be 0 for BT_SSP_PAIRING_VARIANT_CONSENT &
